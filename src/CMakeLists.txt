@@ -1,0 +1,12 @@
+
+set(SRC
+main.d
+)
+
+find_library(BRIGDGEQT_LIB NAMES bridgeqt PATHS ${PROJECT_SOURCE_DIR}/bridgeqt/)
+
+set (LIBS ${BRIDGEQT_LIB} ${QT_LIBRARIES} )
+
+add_d_target(DvasTest TYPE BINARY SOURCES ${SRC} 
+LIBS bridgeqt QtGui QtOpenGL 
+LIB_PATHS /home/hagen/Dvas/bridgeqt /usr/lib/x86_64-linux-gnu/)
